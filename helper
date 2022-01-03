@@ -1,0 +1,73 @@
+
+					<div>
+						<label for="select_all"> Select All</label>
+						<input checked type="radio" id="select_all" name="selection" value="video">
+					</div>
+
+					<div>
+						<label for="deselect_all"> Show Videos</label>
+						<input checked type="radio" id="select_all" name="selection" value="video">
+					</div>
+
+
+
+
+
+
+var myarray = [];
+
+
+myarray.push('hi');
+
+myarray.push(232);
+console.log(myarray);
+
+myarray.pop(232);
+console.log(myarray);
+
+console.log(myarray.includes(23));
+
+
+
+<div class="post-item">
+    <img src="https://www.redwolf.in/image/catalog/designer-Images/themes/iron-man-artist-image.png">
+
+    <div>
+        <button class="post-selected" type="button">yes</button>
+        <button type="button">No</button>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+$returnvalue = '<div id="my-shortcode-container">
+    <?php foreach ($mydata as $key => $value) {  ?>
+        <div class="post-item">
+            <a href="<?php echo $value["image_url"] ; ?> ">
+                <?php if($value["type"]== "IMAGE") { ?>
+                    <img src="<?php echo $value["image_url"] ;  ?>">
+                <?php 
+                }
+
+                else { ?>
+
+                <video width="" height="" class=""  controls>
+                    <source src=" <?php echo $value["image_url"] ?> " type="video/mp4">
+                    <source src=" <?php echo $value["image_url"] ?> " type="video/ogg">
+                    Your browser does not support the video tag.
+                </video>
+
+                <?php 
+
+                }?>
+                
+            </a>
+        </div>
+    }        
+    </div>'
